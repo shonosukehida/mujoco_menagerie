@@ -1,6 +1,8 @@
 <mujoco model="panda scene">
   <include file="panda.xml"/>
 
+  <option timestep="0.002" gravity="0 0 -9.81" iterations="100" cone="elliptic" />
+
   <statistic center="0.3 0 0.4" extent="1"/>
 
   <visual>
