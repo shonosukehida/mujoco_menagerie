@@ -269,7 +269,7 @@
     <position name="actuator5" joint="joint5" ctrlrange="-2.8 2.8" kp="1000"/>
     <position name="actuator6" joint="joint6" ctrlrange="0 3.7" kp="1000"/>
     <position name="actuator7" joint="joint7" ctrlrange="-2.8 2.8" kp="1000"/>
-    <position name="actuator8" tendon="split" ctrlrange="0 0.04" kp="1000"/>
+    <!-- <position name="actuator8" tendon="split" ctrlrange="0 0.04" kp="1000"/> -->
   </actuator>
 
 
