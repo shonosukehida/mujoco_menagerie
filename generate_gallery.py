@@ -38,16 +38,16 @@ DEFAULT_FOV = 40
 
 
 class ModelType(int, enum.Enum):
-  ARM = 0
-  DUAL_ARM = 1
-  END_EFFECTOR = 2
-  MOBILE_MANIPULATOR = 3
-  QUADRUPED = 4
-  BIPED = 5
-  HUMANOID = 6
-  DRONE = 7
-  BIOMECHANICAL = 8
-  MISC = 9
+    ARM = 0
+    DUAL_ARM = 1
+    END_EFFECTOR = 2
+    MOBILE_MANIPULATOR = 3
+    QUADRUPED = 4
+    BIPED = 5
+    HUMANOID = 6
+    DRONE = 7
+    BIOMECHANICAL = 8
+    MISC = 9
 
 
 NAME_MAP = {
@@ -140,8 +140,7 @@ DEFAULT_FOV = 40
 
 CAMERA_MAP = {
     "pal_talos/talos": dict(
-        pos="2.312 0.005 1.144",
-        xyaxes="-0.002 1.000 -0.000 -0.107 -0.000 0.994",
+        pos="2.312 0.005 1.144", xyaxes="-0.002 1.000 -0.000 -0.107 -0.000 0.994"
     ),
     "skydio_x2/x2": dict(
         pos="-0.580 -0.260 0.622",
@@ -149,8 +148,7 @@ CAMERA_MAP = {
         fovy=60,
     ),
     "flybody/fruitfly": dict(
-        pos="0.430 -0.361 0.326", xyaxes="0.589 0.808 0.000 -0.486 0.354 0.799",
-        fovy=50
+        pos="0.430 -0.361 0.326", xyaxes="0.589 0.808 0.000 -0.486 0.354 0.799", fovy=50
     ),
     "wonik_allegro/left_hand": dict(
         pos="0.002 0.043 0.432", xyaxes="0.052 -0.999 0.000 0.998 0.052 0.017"
@@ -201,13 +199,10 @@ CAMERA_MAP = {
         fovy=45,
     ),
     "unitree_h1/h1": dict(
-        pos="2.098 0.006 1.893",
-        xyaxes="0.007 1.000 -0.000 -0.394 0.003 0.919",
-        fovy=45,
+        pos="2.098 0.006 1.893", xyaxes="0.007 1.000 -0.000 -0.394 0.003 0.919", fovy=45
     ),
     "robotis_op3/op3": dict(
-        pos="0.673 -0.024 0.447", xyaxes="0.035 0.999 0.000 -0.252 0.009 0.968",
-        fovy=45
+        pos="0.673 -0.024 0.447", xyaxes="0.035 0.999 0.000 -0.252 0.009 0.968", fovy=45
     ),
     "universal_robots_ur5e/ur5e": dict(
         pos="0.603 1.012 0.595",
@@ -265,9 +260,7 @@ CAMERA_MAP = {
         fovy=45,
     ),
     "google_robot/robot": dict(
-        pos="1.753 -0.231 1.305",
-        xyaxes="0.025 1.000 0.000 -0.306 0.008 0.952",
-        fovy=50,
+        pos="1.753 -0.231 1.305", xyaxes="0.025 1.000 0.000 -0.306 0.008 0.952", fovy=50
     ),
     "google_barkour_vb/barkour_vb": dict(
         pos="0.887 0.338 0.565",
@@ -315,12 +308,10 @@ CAMERA_MAP = {
         fovy=45,
     ),
     "leap_hand/left_hand": dict(
-        pos="-0.123 0.096 0.512",
-        xyaxes="0.004 -1.000 -0.000 0.995 0.004 0.101",
+        pos="-0.123 0.096 0.512", xyaxes="0.004 -1.000 -0.000 0.995 0.004 0.101"
     ),
     "kinova_gen3/gen3": dict(
-        pos="0.252 -1.047 0.521",
-        xyaxes="0.988 0.156 -0.000 -0.024 0.153 0.988",
+        pos="0.252 -1.047 0.521", xyaxes="0.988 0.156 -0.000 -0.024 0.153 0.988"
     ),
     "booster_t1/t1": dict(
         pos="1.499 -0.777 1.2",
@@ -328,9 +319,7 @@ CAMERA_MAP = {
         fovy=DEFAULT_FOV,
     ),
     "agilex_piper/piper": dict(
-        pos="0.288 -0.480 0.294",
-        xyaxes="0.866 0.500 0.000 -0.171 0.296 0.940",
-        fovy=50,
+        pos="0.288 -0.480 0.294", xyaxes="0.866 0.500 0.000 -0.171 0.296 0.940", fovy=50
     ),
 }
 
@@ -350,23 +339,23 @@ KEEP_LIGHT = ["go1", "a1", "op3", "aloha", "left_hand", "stretch", "piper"]
 
 
 def create_arena():
-  arena = mjcf.RootElement()
-  arena.visual.quality.shadowsize = 8192
-  arena.visual.headlight.diffuse = (0.6,) * 3
-  arena.visual.headlight.ambient = (0.3,) * 3
-  arena.visual.headlight.specular = (0.2,) * 3
-  getattr(arena.visual, "global").offheight = 720
-  getattr(arena.visual, "global").offwidth = 1280
-  arena.asset.add(
-      "texture",
-      type="skybox",
-      builtin="gradient",
-      height=512,
-      width=512,
-      rgb1="1 1 1",
-      rgb2="1 1 1",
-  )
-  return arena
+    arena = mjcf.RootElement()
+    arena.visual.quality.shadowsize = 8192
+    arena.visual.headlight.diffuse = (0.6,) * 3
+    arena.visual.headlight.ambient = (0.3,) * 3
+    arena.visual.headlight.specular = (0.2,) * 3
+    getattr(arena.visual, "global").offheight = 720
+    getattr(arena.visual, "global").offwidth = 1280
+    arena.asset.add(
+        "texture",
+        type="skybox",
+        builtin="gradient",
+        height=512,
+        width=512,
+        rgb1="1 1 1",
+        rgb2="1 1 1",
+    )
+    return arena
 
 
 MODEL_XMLS = [pathlib.Path(f"../{k}.xml") for k in MODEL_MAP.keys()]
@@ -374,108 +363,108 @@ MODEL_XMLS = [pathlib.Path(f"../{k}.xml") for k in MODEL_MAP.keys()]
 
 # Sort XML files.
 def sort_func(xml):
-  name = f"{xml.parent.stem}/{xml.stem}"
-  return (MODEL_MAP[name], xml.stem)
+    name = f"{xml.parent.stem}/{xml.stem}"
+    return (MODEL_MAP[name], xml.stem)
 
 
 MODEL_XMLS = sorted(MODEL_XMLS, key=sort_func)
 
 
 def main(argv):
-  del argv
+    del argv
 
-  paths = []
-  pngs = []
-  for xml in tqdm.auto.tqdm(MODEL_XMLS):
-    try:
-      robot_maker = xml.parent.stem
-      robot_name = xml.stem
-      robot = f"{robot_maker}/{robot_name}"
+    paths = []
+    pngs = []
+    for xml in tqdm.auto.tqdm(MODEL_XMLS):
+        try:
+            robot_maker = xml.parent.stem
+            robot_name = xml.stem
+            robot = f"{robot_maker}/{robot_name}"
 
-      if robot not in CAMERA_MAP:
-        continue
+            if robot not in CAMERA_MAP:
+                continue
 
-      arena = create_arena()
+            arena = create_arena()
 
-      if robot_maker in KEYFRAME_MAP:
-        arena.keyframe.add("key", qpos=KEYFRAME_MAP[robot_maker])
+            if robot_maker in KEYFRAME_MAP:
+                arena.keyframe.add("key", qpos=KEYFRAME_MAP[robot_maker])
 
-      model_xml = mjcf.from_path(xml.as_posix(), escape_separators=True)
-      for light in model_xml.find_all("light"):
-        if robot_name not in KEEP_LIGHT:
-          light.remove()
+            model_xml = mjcf.from_path(xml.as_posix(), escape_separators=True)
+            for light in model_xml.find_all("light"):
+                if robot_name not in KEEP_LIGHT:
+                    light.remove()
 
-      if robot in CAMERA_MAP:
-        camera_kwargs = CAMERA_MAP[robot]
-        arena.worldbody.add("camera", name="thumbnail", **camera_kwargs)
+            if robot in CAMERA_MAP:
+                camera_kwargs = CAMERA_MAP[robot]
+                arena.worldbody.add("camera", name="thumbnail", **camera_kwargs)
 
-      if robot_maker == "aloha":
-        right_base = model_xml.find("body", "right\\base_link")
-        right_base.pos[0] = 0.3
-        left_base = model_xml.find("body", "left\\base_link")
-        left_base.pos[0] = -0.3
+            if robot_maker == "aloha":
+                right_base = model_xml.find("body", "right\\base_link")
+                right_base.pos[0] = 0.3
+                left_base = model_xml.find("body", "left\\base_link")
+                left_base.pos[0] = -0.3
 
-      arena.include_copy(model_xml, override_attributes=True)
+            arena.include_copy(model_xml, override_attributes=True)
 
-      physics = mjcf.Physics.from_mjcf_model(arena)
+            physics = mjcf.Physics.from_mjcf_model(arena)
 
-      try:
-        physics.reset(keyframe_id=0)
-      except:
-        physics.reset()
+            try:
+                physics.reset(keyframe_id=0)
+            except:
+                physics.reset()
 
-      physics.forward()
+            physics.forward()
 
-      if robot in CAMERA_MAP:
-        img = physics.render(height=500, width=500, camera_id="thumbnail")
-      else:
-        img = physics.render(height=500, width=500)
+            if robot in CAMERA_MAP:
+                img = physics.render(height=500, width=500, camera_id="thumbnail")
+            else:
+                img = physics.render(height=500, width=500)
 
-      img = cv2.putText(
-          img.copy(),
-          NAME_MAP[robot],
-          (5, 480),
-          cv2.FONT_HERSHEY_SIMPLEX,
-          1.3,
-          (0, 0, 0),
-          1,
-          cv2.LINE_AA,
-      )
+            img = cv2.putText(
+                img.copy(),
+                NAME_MAP[robot],
+                (5, 480),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                1.3,
+                (0, 0, 0),
+                1,
+                cv2.LINE_AA,
+            )
 
-      filename = f"assets/{robot_maker}-{robot_name}.png"
-      paths.append(filename)
+            filename = f"assets/{robot_maker}-{robot_name}.png"
+            paths.append(filename)
 
-      png = np.zeros((500, 500, 4), dtype=np.uint8)
-      u, v = np.where(np.all(img == 255, axis=-1))
-      png[u, v, -1] = 0
-      png[u, v, :3] = 0
-      u, v = np.where(np.any(img != 255, axis=-1))
-      png[u, v, :3] = img[u, v]
-      png[u, v, -1] = 255
-      pngs.append(png.copy())
-      Image.fromarray(png).save(filename)
-    except Exception as e:
-      print(e)
-      print(f"failed to load {xml.as_posix()}")
+            png = np.zeros((500, 500, 4), dtype=np.uint8)
+            u, v = np.where(np.all(img == 255, axis=-1))
+            png[u, v, -1] = 0
+            png[u, v, :3] = 0
+            u, v = np.where(np.any(img != 255, axis=-1))
+            png[u, v, :3] = img[u, v]
+            png[u, v, -1] = 255
+            pngs.append(png.copy())
+            Image.fromarray(png).save(filename)
+        except Exception as e:
+            print(e)
+            print(f"failed to load {xml.as_posix()}")
 
-  n_models = len(paths)
-  n_cols = 5
-  n_rows = int(math.ceil(n_models / n_cols))
-  table = []
-  for r in range(n_rows):
-    row = []
-    for c in range(n_cols):
-      i = r * n_cols + c
-      if i >= n_models:
-        row.append("")
-      else:
-        row.append(f"<img src='{paths[i]}' width=100>")
-    table.extend(row)
+    n_models = len(paths)
+    n_cols = 5
+    n_rows = int(math.ceil(n_models / n_cols))
+    table = []
+    for r in range(n_rows):
+        row = []
+        for c in range(n_cols):
+            i = r * n_cols + c
+            if i >= n_models:
+                row.append("")
+            else:
+                row.append(f"<img src='{paths[i]}' width=100>")
+        table.extend(row)
 
-  mdfile = mdutils.MdUtils(file_name="gallery")
-  mdfile.new_table(columns=n_cols, rows=n_rows, text=table, text_align="center")
-  mdfile.create_md_file()
+    mdfile = mdutils.MdUtils(file_name="gallery")
+    mdfile.new_table(columns=n_cols, rows=n_rows, text=table, text_align="center")
+    mdfile.create_md_file()
 
 
 if __name__ == "__main__":
-  app.run(main)
+    app.run(main)
