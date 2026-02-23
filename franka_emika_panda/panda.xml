@@ -269,14 +269,14 @@
             gear="1"
             gainprm="5000"
             biasprm="0 -5000 -500"
-            forcerange="-500 500"
+            forcerange="-200 200"
             />
     <general name="actuator2" joint="joint2"
             class="panda"
             gear="1"
             gainprm="5000"
             biasprm="0 -5000 -500"
-            forcerange="-500 500"
+            forcerange="-200 200"
             ctrlrange="-1.7628 1.7628"
             />
     <general name="actuator3" joint="joint3"
@@ -284,14 +284,14 @@
             gear="1"
             gainprm="5000"
             biasprm="0 -5000 -500"
-            forcerange="-500 500"
+            forcerange="-200 200"
             />
     <general name="actuator4" joint="joint4"
             class="panda"
             gear="1"
             gainprm="5000"
             biasprm="0 -5000 -500"
-            forcerange="-500 500"
+            forcerange="-200 200"
             ctrlrange="-3.0718 -0.0698"
             />
     <general name="actuator5" joint="joint5"
@@ -299,14 +299,14 @@
             gear="1"
             gainprm="5000"
             biasprm="0 -5000 -500"
-            forcerange="-500 500"
+            forcerange="-200 200"
             />
     <general name="actuator6" joint="joint6"
             class="panda"
             gear="1"
             gainprm="5000"
             biasprm="0 -5000 -500"
-            forcerange="-500 500"
+            forcerange="-200 200"
             ctrlrange="-0.0175 3.7525"
             />
     <general name="actuator7" joint="joint7"
@@ -314,7 +314,7 @@
             gear="1"
             gainprm="5000"
             biasprm="0 -5000 -500"
-            forcerange="-500 500"
+            forcerange="-200 200"
             />
   </actuator>
 
